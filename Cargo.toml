@@ -1,0 +1,7 @@
+[package]
+name = "pytest"
+version = "0.1.0"
+authors = ["Matthias Endler <matthias.endler@trivago.com>"]
+
+[dependencies]
+cpython = { git = "https://github.com/dgrunwald/rust-cpython.git" }
