@@ -2,13 +2,13 @@
 
 Rust bindings for [Pygments](http://pygments.org/), a powerful syntax highlighter.
 
-# Requirements
+### Requirements
 
 * Rust nightly
 * A Python Runtime (2.7 or 3.x)
 * [pygments 2.0](https://pypi.python.org/pypi/Pygments)
 
-# How to use
+### How to use
 
 ```Rust
 extern crate pygments;
