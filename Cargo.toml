@@ -2,6 +2,14 @@
 name = "pygments"
 version = "0.1.0"
 authors = ["Matthias Endler <matthias-endler@gmx.net>"]
+keywords = ["syntax", "code", "highlighting", "html"]
+description = "Rust bindings for pygments, a powerful syntax highlighter"
+homepage = "https://github.com/mre/pygments-rs"
+documentation = "https://github.com/mre/pygments-rs"
+repository = "https://github.com/mre/pygments-rs"
+
+license = "MIT"
+readme = "README.md"
 
 [dependencies]
 cpython = { git = "https://github.com/dgrunwald/rust-cpython.git" }
