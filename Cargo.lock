@@ -1,5 +1,5 @@
 [root]
-name = "pytest"
+name = "pygments"
 version = "0.1.0"
 dependencies = [
  "cpython 0.0.4 (git+https://github.com/dgrunwald/rust-cpython.git)",
@@ -72,7 +72,7 @@ version = "0.1.2"
 source = "git+https://github.com/dgrunwald/rust-cpython.git#67282d2e2343de505f11b64e23545e8556d6e2e7"
 dependencies = [
  "libc 0.2.4 (registry+https://github.com/rust-lang/crates.io-index)",
- "regex 0.1.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "regex 0.1.46 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -87,7 +87,7 @@ dependencies = [
 
 [[package]]
 name = "regex"
-version = "0.1.44"
+version = "0.1.46"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "aho-corasick 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",

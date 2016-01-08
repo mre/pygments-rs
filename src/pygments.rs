@@ -3,7 +3,7 @@ extern crate cpython;
 use cpython::Python;
 use cpython::ObjectProtocol;
 
-fn main() {
+pub fn highlight(input: String) -> String {
     let gil = Python::acquire_gil();
     let py = gil.python();
 
@@ -27,9 +27,7 @@ fn main() {
     let html_formatter = formatters.get(py, "HtmlFormatter").unwrap();
     let html_formatter_obj = html_formatter.call(py, cpython::NoArgs, None).unwrap();
 
-    let code = "print \'Hello World\'";
     //println!(html_formatter.call(py, (code,), None).unwrap().extract(py).unwrap());
-    let formatted: String =  highlight.call(py, (code, &python_lexer_obj, &html_formatter_obj), None).unwrap().extract(py).unwrap();
-
-    println!("{}", formatted);
+    let formatted: String = highlight.call(py, (input, &python_lexer_obj, &html_formatter_obj), None).unwrap().extract(py).unwrap();
+    formatted
 }
