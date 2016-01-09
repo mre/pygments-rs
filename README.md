@@ -17,7 +17,7 @@ use pygments::highlight;
 
 fn main() {
     // Format some code
-    let result = pygments::highlight("print [123, 456, None]".to_owned());
+    let result = pygments::highlight("print [123, 456, None]");
     println!("{}", result);
 }
 ```

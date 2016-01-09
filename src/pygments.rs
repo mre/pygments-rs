@@ -3,18 +3,18 @@ extern crate cpython;
 use cpython::Python;
 use cpython::ObjectProtocol;
 
-pub fn highlight(input: String) -> String {
+/// A simple wrapper around Pygments, the awesome code syntax highlighter
+/// This basically calls the following Python code from Rust:
+///
+/// from pygments import highlight
+/// from pygments.lexers import PythonLexer
+/// from pygments.formatters import HtmlFormatter
+///
+/// code = 'print "Hello World"'
+/// print highlight(code, PythonLexer(), HtmlFormatter())
+pub fn highlight<'a>(input: &'a str) -> String {
     let gil = Python::acquire_gil();
     let py = gil.python();
-
-    /*
-    from pygments import highlight
-    from pygments.lexers import PythonLexer
-    from pygments.formatters import HtmlFormatter
-
-    code = 'print "Hello World"'
-    print highlight(code, PythonLexer(), HtmlFormatter())
-    */
 
     let pygments = py.import("pygments").unwrap();
     let highlight = pygments.get(py, "highlight").unwrap();
